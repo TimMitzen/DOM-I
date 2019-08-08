@@ -60,6 +60,7 @@ nav1.style.color = "green";
 nav1.addEventListener("click",(event) =>{
   alert("Hello World")
 });
+
 let nav2 = document.querySelector(".container a:nth-child(2)");
 nav2.style.color = "green";
 nav2.textContent = siteContent["nav"]["nav-item-2"];
@@ -102,9 +103,15 @@ let topContent = document.querySelectorAll(".text-content h4");
 topContent[0].textContent = siteContent["main-content"]["features-h4"];
 topContent[1].textContent = siteContent["main-content"]["about-h4"];
 
-let topText = document.querySelectorAll(".text-content p"); //use all for array
+
+let topText = document.querySelectorAll(" .top-content .text-content p"); //use all for array
 topText[0].textContent = siteContent["main-content"]["features-content"];// use the 0 cause its an array
 topText[1].textContent = siteContent["main-content"]["about-content"];
+for(let text of topText){
+  text.style.color = "red";
+}
+
+
 //picture in the middle
 let mainPicture = document.querySelector(".middle-img");
 mainPicture.setAttribute("src",siteContent["main-content"]["middle-img-src"]);
