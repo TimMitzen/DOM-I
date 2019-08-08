@@ -47,9 +47,7 @@ let newText1 = document.querySelector("nav");
 let text1 = document.createTextNode("Click Me");
 newText1.appendChild(text1);// adds text
 newText1.style.color = "green";
-newText1.addEventListener("click",(event) =>{
-  alert("Hello World")
-})
+
 //using prepend
 let newText2 = document.querySelector("nav");
 let text2 = document.createTextNode("Hi");
@@ -59,7 +57,9 @@ newText2.style.color = "green";
 let nav1 = document.querySelector(".container a:first-child");
 nav1.textContent  = siteContent["nav"]["nav-item-1"];
 nav1.style.color = "green";
-
+nav1.addEventListener("click",(event) =>{
+  alert("Hello World")
+});
 let nav2 = document.querySelector(".container a:nth-child(2)");
 nav2.style.color = "green";
 nav2.textContent = siteContent["nav"]["nav-item-2"];
